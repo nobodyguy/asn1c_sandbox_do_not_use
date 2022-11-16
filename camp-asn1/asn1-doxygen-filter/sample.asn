@@ -1,0 +1,59 @@
+--
+--  OPTIONAL license information.
+--
+
+-- @namespace OidName
+OidName
+{iso(1) identified-organization(3) ieee(111)
+standards-association-numbered-series-standards(2) wave-stds(1609)
+dot2(2) scms(2) interfaces(1) oid (5)}
+
+DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+
+EXPORTS ALL;
+
+IMPORTS
+
+  SomeStructureFromAnotherFile,
+  AnotherOne,
+  OneMore
+
+FROM AnotherOidName{iso(1) identified-organization(3) ieee(111)
+	 standards-association-numbered-series-standards(2) wave-stds(1609)
+	 dot2(2) base(1) base-types(2)}
+
+;
+
+---
+-- @brief This is the first line of comment.
+--        Note that the second line of comment has the same hanging indentation
+--        as the first line.
+-- @class StructureName
+-- @param parameterNameOne   This is the first line that describes the 
+--                           parameter's role in a structure. Note that this 
+--                           second line of comment has the same hanging 
+--                           indentation as the first line.
+-- @param parameterNameTwo   This is the first line that describes the 
+--                           parameter's role in a structure. Note that this 
+--                           second line of comment has the same hanging 
+--                           indentation as the first line.
+-- @param parameterNameThree This is the first line that describes the
+--                           parameter's role in a structure. Note that this
+--                           second line of comment has the same hanging
+--                           indentation as the first line.
+-- @see SomeStructureFromAnotherFile, OneMore, AnotherOne
+StructureName ::= StructureType {
+    parameterNameOne SomeStructureFromAnotherFile,
+    parameterNameTwo OneMore,
+    parameterNameThree AnotherOne,
+    ...
+}
+
+---
+-- @brief This is the first line of comment.
+--        Note that the second line of comment has the same hanging indentation
+--        as the first line.
+-- @class AnotherStructureName
+AnotherStructureName ::= AnotherStructureType
+
+END
